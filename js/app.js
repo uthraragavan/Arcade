@@ -8,15 +8,20 @@
 // Enemy Class
 // Enemies our player must avoid
 //
+'use strict';
+var Obj = function() {
+    this.x = 0;
+    this.y = 0;
+}
 var Enemy = function() {
     this.sprite = 'images/enemy-bug.png';
     this.origx = 0;
     this.origy = 0;
     this.speed = 1;
-    this.x = 0;
-    this.y = 0;
+    Obj.call(this);
 };
-
+Enemy.prototype = Object.create(Obj.prototype);
+Enemy.prototype.constructor = Enemy;
 //
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -66,14 +71,23 @@ Enemy.prototype.resetSpeed = function() {
 //
 var Player = function() {
     this.playchar = 'images/char-boy.png';
-    this.x = 200;
-    this.y = 400;
+    Obj.call(this);
     this.won = false;
     this.winstar = 'images/Star.png';
     this.timeup = false;
     this.score = 0;
 };
 
+Player.prototype = Object.create(Obj.prototype);
+Player.prototype.constructor = Player;
+
+//
+// Set initial position of player
+//
+Player.prototype.setInitialPosition = function() {
+    this.x = 200;
+    this.y = 200;
+}
 //
 // Resets Player object
 //
@@ -146,7 +160,7 @@ for(var i=0;i<4;i++) {
 }
 
 var player = new Player();
-
+player.setInitialPosition();
 //
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
