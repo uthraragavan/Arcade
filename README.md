@@ -12,6 +12,10 @@ Arcade is a game that I developed for Udacity front-end nanodegree. The goal is 
 * After the completion of a game, a new game can be started by pressing **Start** button or can be rest by pressing **Reset** button. _Resetting will reset the score to 0_.
 * Keep in mind that a new game cannot be started or reset, while a game is in progress.
 
+## Running instructions
+* Visit my [Github page](https://uthraragavan.github.io/Arcade/).
+* Click on Download .zip for Windows or Download .tar.gz for Linux/Mac.
+* To start playing, click on index.html.
 ## System requirements
 * Responsive across various devices such as mobile devices, tablets and laptops.
 * Any modern web browser.
