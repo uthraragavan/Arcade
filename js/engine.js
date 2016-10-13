@@ -17,6 +17,7 @@
 //
 // Engine class
 //
+'use strict';
 var Engine = (function(global) {
     //
     //Predefine the variables we'll be using within this scope,
