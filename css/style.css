@@ -1,0 +1,53 @@
+
+/*
+ style.css
+ Author: Uthra Vijayaragavan
+ CSS style sheet for index.html
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.gamedetails {
+    border: 1px solid white;
+    background-color: red;
+}
+
+body {
+    text-align: center;
+    background-color: black;
+    margin: 10px;
+}
+
+#game,#score,#time,#scoretext {
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#logo {
+    max-width: 10%;
+    max-height: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 150%;
+}
+/*
+ Media Queries to adjust the size of canvas, headings and img
+ under screen size of 765px
+*/
+@media screen and (max-width: 765px) {
+    img {
+        max-width: 75%;
+    }
+    canvas {
+        max-width: 75%;
+        max-height: 75%;
+    }
+    h1 {
+        font-size: 125%;
+    }
+}

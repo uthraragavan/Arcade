@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+index.html
+Author: Uthra Vijayaragavan
+Date Modified: 10/11/2016
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arcade Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Outer Bootstrap container -->
+    <div class="container outer">
+    <!-- Header -->
+        <header class="row header-row">
+        <!-- Heading -->
+            <div class="col-sm-12">
+                <h1 id = "game">Arcade Game</h1>
+            </div>
+            <!-- Placeholder div -->
+            <div class="col-sm-4"></div>
+            <!-- Game details div -->
+            <div class="col-sm-4 gamedetails">
+                <figure>
+                    <img id = "logo" src="images/Gem Orange.png" alt="Game Logo">
+                </figure>
+                <button type = "button" class= "btn btn-primary" id = "start">Start</button>
+                <span id = "scoretext">Score: </span>
+                <span id ="score">0</span>
+                <span id = "time">Time: 0</span>
+                <button type = "button" class= "btn btn-primary" id = "reset" onclick="location.reload();">Reset</button>
+            </div>
+        </header>
+    </div>
+    <!-- Scripts included as part of html -->
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>
