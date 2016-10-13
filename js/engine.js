@@ -215,11 +215,13 @@ var Engine = (function(global) {
             allEnemies.forEach(function(enemy) {
                 enemy.resetSpeed();
             });
-            // Update captions
-            gametitle.innerHTML = "Time up!";
-            gametitle.style.color = "yellow";
-            var img = document.getElementById("logo");
-            img.src = "images/Key.png";
+            // Update captions only if player hasn't won
+            if(player.won === false) {
+                gametitle.innerHTML = "Time up!";
+                gametitle.style.color = "yellow";
+                var img = document.getElementById("logo");
+                img.src = "images/Key.png";
+            }
 
         }
     }
